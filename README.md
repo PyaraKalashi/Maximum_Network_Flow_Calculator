@@ -8,11 +8,11 @@ This Java application calculates the **maximum flow in a directed network** usin
 
 w2052776_20221224_MaxFlow/
 
-├── w2052776_20221224_Flow_Application.java # Main class to run the application
-├── w2052776_20221224_Flow_Graph.java # Represents the flow graph (network)
-├── w2052776_20221224_GraphData_Reader.java # Reads graph structure from a file
-├── w2052776_20221224_CalculatorOfThe_Max_flow.java # Implements the Edmonds-Karp algorithm
-├── network.txt # Input file containing graph data
+w2052776_20221224_Flow_Application.java # Main class to run the application
+w2052776_20221224_Flow_Graph.java # Represents the flow graph (network)
+w2052776_20221224_GraphData_Reader.java # Reads graph structure from a file
+w2052776_20221224_CalculatorOfThe_Max_flow.java # Implements the Edmonds-Karp algorithm
+network.txt # Input file containing graph data
 
 
 ---
