@@ -7,7 +7,7 @@ This Java application calculates the **maximum flow in a directed network** usin
 ## 📁 Project Structure
 
 w2052776_20221224_MaxFlow/
-│
+
 ├── w2052776_20221224_Flow_Application.java # Main class to run the application
 ├── w2052776_20221224_Flow_Graph.java # Represents the flow graph (network)
 ├── w2052776_20221224_GraphData_Reader.java # Reads graph structure from a file
