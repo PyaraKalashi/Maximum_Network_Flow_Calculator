@@ -6,7 +6,7 @@ This Java application calculates the **maximum flow in a directed network** usin
 
 ## 📁 Project Structure
 
-w2052776_20221224_MaxFlow/
+max_flow/
 
 w2052776_20221224_Flow_Application.java # Main class to run the application
 w2052776_20221224_Flow_Graph.java # Represents the flow graph (network)
@@ -48,11 +48,11 @@ Example Input File
 
 ## ▶️ How to Run
 
-1. Ensure your working directory contains `network.txt` under `src/w2052776_20221224_MaxFlow/`.
+1. Ensure your working directory contains `network.txt` under `src/max_flow/`.
 2. Compile the Java classes:
 
 ```bash
-javac w2052776_20221224_MaxFlow/*.java
+javac max_flow/*.java
 
-java w2052776_20221224_MaxFlow.w2052776_20221224_Flow_Application
+java max_flow.flow_application
 
