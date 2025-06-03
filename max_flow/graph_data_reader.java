@@ -1,14 +1,3 @@
-/**
- * GraphDataReader is a utility class that reads a flow network definition from a text file
- * and builds a FlowGraph object based on the given vertex and edge information.
- * The file format supports comments and expects:
- * - First line: number of vertices.
- * - Subsequent lines: edges defined by source, destination, and capacity.
- *
- * Made By :- A.P.K.Perera
- * Student ID :- 20221224
- * UOW ID :- w2052776
- */
 package max_flow;
 
 import java.io.BufferedReader; // Imports BufferedReader to efficiently read text from files
@@ -17,8 +6,8 @@ import java.io.IOException; // Imports IOException to handle file reading except
 import java.util.ArrayList; // Imports ArrayList to store valid lines temporarily
 import java.util.List; // Imports List interface for holding the lines
 
-
-public class graph_data_reader { // Class to read graph data from a file
+// Class to read graph data from a file
+public class graph_data_reader {
     private static final String COMMENT_MARKER = "#";// Defines the marker for comment lines
 
     // Static method that builds and returns a FlowGraph object from a given file

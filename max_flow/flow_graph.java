@@ -1,16 +1,7 @@
-/**
- * FlowGraph class represents a flow network graph with capacities and flow adjustments.
- * It allows adding connections between vertices with specified capacities,
- * and tracks current flows along with capacities.
- *
- * Made By :- A.P.K.Perera
- * Student ID :- 20221224
- * UOW ID :- w2052776
- */
-
 package max_flow;
 
-public class flow_graph { // Defines the class representing a directed flow network
+// Defines the class representing a directed flow network
+public class flow_graph {
     private final int nodeCount; // Stores the number of nodes in the graph
     private final int[][] capacityTable; // 2D array to hold the capacity between each pair of vertices
     private final int[][] currentFlow; // 2D array to hold the current flow between each pair of vertices
@@ -28,14 +19,14 @@ public class flow_graph { // Defines the class representing a directed flow netw
         this.capacityTable[fromVertex][toVertex] += edgeCapacity;  // Add or update capacity
     }
 
-    // Getter: returns the number of vertices in the graph
+    // returns the number of vertices in the graph
     public int getVertexCount() { return nodeCount;}
 
-    // Getter: returns the capacity of the edge from 'fromVertex' to 'toVertex'
+    // returns the capacity of the edge from 'fromVertex' to 'toVertex'
 
     public int getEdgeCapacity(int fromVertex, int toVertex) { return capacityTable[fromVertex][toVertex]; }
 
-    // Getter: returns the current flow through the edge from 'fromVertex' to 'toVertex'
+    //returns the current flow through the edge from 'fromVertex' to 'toVertex'
     public int getCurrentFlow(int fromVertex, int toVertex) { return currentFlow[fromVertex][toVertex]; }
 
 
@@ -43,8 +34,6 @@ public class flow_graph { // Defines the class representing a directed flow netw
     public void modifyFlow(int fromVertex, int toVertex, int adjustment) {
         currentFlow[fromVertex][toVertex] += adjustment;
     }
-
-
     // Prints all edges that have a capacity, along with their current flow values
     public void printFlows() {
 

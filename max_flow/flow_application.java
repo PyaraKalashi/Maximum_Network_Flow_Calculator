@@ -1,16 +1,6 @@
-/**
- * This is the main application class to compute the maximum flow in a network.
- * It reads a graph from a file, calculates the max flow from source to sink,
- * and prints the result along with the final flows through each edge.
- *
- * Made By :- A.P.K.Perera
- * Student ID :- 20221224
- * UOW ID :- w2052776
- */
+package max_flow;
 
-package max_flow;// Task 1: Defines the package for the flow project
-
-import java.io.IOException; // Imports IOException class for handling file read errors
+import java.io.IOException;
 
 // Main class for running the maximum flow computation
 public class flow_application {
@@ -21,33 +11,32 @@ public class flow_application {
     public static void main(String[] args) {
         try {
 
-            // Task 3: Load and parse graph data from the formatted input file
             // Builds a flow network from a text file that contains node count and edge list with capacities
             flow_graph network = graph_data_reader.buildGraphFromFile(
-                    "src/w2052776_20221224_MaxFlow/network.txt");
+                    "C:\\Users\\kalas\\Desktop\\maximum_network_flow_calculator\\Maximum_Network_Flow_Calculator\\max_flow\\network.txt");
 
             // Identifies the terminal/sink node as the last node (n-1), as required by the coursework
             int terminalVertex = network.getVertexCount() - 1;
 
-            // Task 4: Create the max-flow calculator using the chosen algorithm
+            // Creating the max-flow calculator using the chosen algorithm
             calculator_of_the_max_flow flowEngine = new calculator_of_the_max_flow(network);
 
             // Compute the maximum flow from the source (0) to the sink (n-1)
             int maxFlowValue = flowEngine.computeMaximumFlow(SOURCE_VERTEX, terminalVertex);
 
-            // Task 4: Display the total maximum flow result to the user
+            // Display the total maximum flow result to the user
             System.out.println("Maximum achievable flow from vertex " + SOURCE_VERTEX
                     + " to vertex " + terminalVertex + " : " + maxFlowValue);
 
             // Display final edge flows after computing the max flow
             System.out.println("\nFinal edge flows :");
-            flowEngine.printFinalFlows();// Task 4: Outputs the actual flow assigned to each edge after execution
+            flowEngine.printFinalFlows();// Outputs the actual flow assigned to each edge after execution
         }
         // If there was an error reading the input file, display a message
         catch (IOException fileError) {
             System.err.println("File operation failed: " + fileError.getMessage());
         }
-        // If there was an issue with file format (e.g., missing values, invalid integers)
+        // If there was an issue with file format
         catch (IllegalArgumentException dataError) {
             System.err.println("Invalid data format: " + dataError.getMessage());
         }

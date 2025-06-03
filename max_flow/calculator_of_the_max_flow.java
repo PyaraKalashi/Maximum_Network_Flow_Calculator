@@ -1,19 +1,11 @@
-/**
- * MaxFlowCalculator class implements the Edmonds-Karp algorithm (BFS-based Ford-Fulkerson)
- * to compute the maximum flow from a source to a sink in a given flow network.
- * It uses augmenting paths to update flows until no more paths exist.
- *
- * Made By :- A.P.K.Perera
- * Student ID :- 20221224
- * UOW ID :- w2052776
- */
 package max_flow;
 
-import java.util.ArrayDeque; // Imports ArrayDeque for efficient BFS queue
-import java.util.Arrays; // Imports Arrays utility for initializing arrays
+import java.util.ArrayDeque; //  efficient BFS queue
+import java.util.Arrays; //  initializing arrays
 import java.util.Queue;  // Imports Queue interface for BFS
 
-public class calculator_of_the_max_flow {  // Class for computing max flow using BFS-based Ford-Fulkerson
+// Class for computing max flow using BFS-based Ford-Fulkerson
+public class calculator_of_the_max_flow {
 
     // Reference to the flow graph
     private final flow_graph graph;
@@ -79,8 +71,6 @@ public class calculator_of_the_max_flow {  // Class for computing max flow using
             }
             // Insert source at the beginning
             pathBuilder.insert(0, startNode);
-
-            // Print the full augmenting path
             System.out.println(pathBuilder.toString());
 
             // Print the bottleneck capacity
